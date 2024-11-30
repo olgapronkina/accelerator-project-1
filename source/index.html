@@ -1,32 +1,321 @@
 <!DOCTYPE html>
 <html lang="ru" data-validate="html">
-
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>SUPERGYM</title>
-    <link rel="stylesheet" href="sass/style.scss">
+    <link rel="stylesheet" href="sass/style.scss" />
   </head>
 
   <body class="page-body">
-    <!-- пример использования спрайта -->
-    <img src="/__spritemap#sprite-logo-view" alt="Это спрайт">
-    <svg>
-      <use href="/__spritemap#sprite-user"></use>
-    </svg>
-    <!-- примеры требуемых атрибутов data-test="*" -->
-    <div data-test="hero">hero</div>
-    <div data-test="about">about</div>
-    <div data-test="price">price</div>
-    <div data-test="games">games</div>
-    <div data-test="juri">juri</div>
-    <div data-test="features">features</div>
-    <div data-test="offers">offers</div>
-    <div data-test="faq">faq</div>
-    <div data-test="reviews">reviews</div>
-    <div data-test="form">form</div>
-    <div data-test="footer">footer</div>
-    <script type="module" src="js/main.js"></script>
-  </body>
+    <div class="page-body__container">
+      <header class="hero container">
+        <div class="hero__top">
+          <svg class="hero__logo">
+            <use href="/__spritemap#sprite-logo"></use>
+          </svg>
 
+          <a class="hero__phone" href="tel:+78005555555">8 800 555-55-55</a>
+        </div>
+        <div class="hero__main">
+          <div class="hero__info">
+            <ul class="hero__services">
+              <li>Тренажерный зал</li>
+              <li>Групповые занятия</li>
+              <li>Кардио-зона</li>
+            </ul>
+            <div class="hero__fitnes">
+              <h3 class="hero__city">Омск</h3>
+              <h1 class="hero__title">
+                ФИТНЕС<br />
+                ЦЕНТР
+              </h1>
+              <button class="hero__button" id="buy-abonnement">
+                Купить абонемент
+              </button>
+            </div>
+          </div>
+          <img
+            class="hero__img"
+            src="./img/hero-img.jpg"
+            srcset="./img/hero-img@2x 2x"
+            width="324"
+            height="390"
+            alt="Клиент нашего фитнес центра."
+          />
+        </div>
+      </header>
+
+      <section class="about container">
+        <div class="about__container">
+          <div class="about__text">
+            <h3 class="about__title">Тренажёрный зал</h3>
+            <h6 class="about__slogan">Просторный зал площадью 900 кв/м</h6>
+            <div class="about__paragraphs">
+              <p class="about__description">
+                Supergym – самый большой фитнес центр за Уралом и идеальное
+                место для укрепления тела и здоровья. Тренажёрный зал оснащён
+                всем необходимым современным оборудованием для всех спортсменов.
+              </p>
+              <p class="about__description--hidden">
+                В зале расположены отдельная зона для Crossfit и кардио-зона с
+                40 тренажёрами. Также в фитнес центре есть несколько
+                оборудованных залов для различных видов групповых занятий.
+              </p>
+            </div>
+          </div>
+
+          <img
+            class="about__image"
+            src="./img/main-img.jpg"
+            srcset="./img/main-img@2x 2x"
+            width="320"
+            height="280"
+            alt="О нас."
+          />
+        </div>
+      </section>
+      <section class="price container">
+        <h3 class="price__title">Абонементы</h3>
+        <div class="price__tabs">
+          <button
+            class="price__tab price__tab--button price__tab--active"
+            data-tab="tab1"
+            active
+          >
+            1 месяц
+          </button>
+          <button class="price__tab price__tab--button" data-tab="tab2">
+            6 месяцев
+          </button>
+          <button class="price__tab price__tab--button" data-tab="tab3">
+            12 месяцев
+          </button>
+        </div>
+
+        <div class="price__content" id="tab1">
+          <ul class="price__list">
+            <li class="price__item">
+              <div class="price__item--content">
+                <h4 class="price__option">С тренером</h4>
+                <p class="price__subtitle">12 занятий</p>
+                <div class="price__all">
+                  <span class="price__cost">5000</span>
+                  <span class="price__shadow">5000</span>
+                  <svg class="price__currency">
+                    <use href="/__spritemap#sprite-currency"></use>
+                  </svg>
+                </div>
+
+                <button class="button button--primary price__button">
+                  Купить абонемент
+                </button>
+              </div>
+            </li>
+            <li class="price__item">
+              <div class="price__item--content">
+                <h4 class="price__option">Дневной</h4>
+                <p class="price__subtitle">с 8:00 до 17:00</p>
+                <div class="price__all">
+                  <span class="price__cost">1700</span>
+                  <span class="price__shadow">1700</span>
+                  <svg class="price__currency">
+                    <use href="/__spritemap#sprite-currency"></use>
+                  </svg>
+                </div>
+
+                <button class="button button--primary price__button">
+                  Купить абонемент
+                </button>
+              </div>
+            </li>
+            <li class="price__item">
+              <div class="price__item--content">
+                <h4 class="price__option">Полный день</h4>
+                <p class="price__subtitle">с 8:00 до 22:00</p>
+                <div class="price__all">
+                  <span class="price__cost">2700</span>
+                  <span class="price__shadow">2700</span>
+                  <svg class="price__currency">
+                    <use href="/__spritemap#sprite-currency"></use>
+                  </svg>
+                </div>
+
+                <button class="button button--primary price__button">
+                  Купить абонемент
+                </button>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="games container">
+        <div class="games__container">
+          <div class="games__text">
+            <div class="games__primary">
+              <h2 class="games__title">
+                SUPER<br />
+                GAMES
+              </h2>
+
+              <div class="games__info info">
+                <div class="info__item">
+                  <span class="info__label">Дата</span>
+                  <div class="info__value">
+                    <span class="info__primary">7</span>
+                    <span class="info__secondary"
+                      >Марта<br />
+                      2019</span
+                    >
+                  </div>
+                </div>
+                <div class="info__item">
+                  <span class="info__label">Время</span>
+                  <span class="info__primary">12:00</span>
+                </div>
+              </div>
+            </div>
+            <p class="games__secondary">Ежегодные соревнования по CrossFit</p>
+            <button class="games__button">заполнить заявку</button>
+          </div>
+          <img
+            class="games__img"
+            src="./img/games.jpg"
+            srcset="./img/games.jpg@2x 2x"
+            width="290"
+            height="290"
+            alt="Фотография спортсмена на соневнованиях."
+          />
+        </div>
+      </section>
+
+      <section class="jury">
+        <div class="jury__slides">
+          <div class="jury__slide">
+            <div class="jury__card" tabindex="0">
+              <img class="jury__img" src="./img/card1.jpg" alt="Тренер 1" />
+              <div class="jury__overlay">
+                <p class="jury__name">Тренер 1<br />Опыт: 5 лет</p>
+                <ul class="jury__characteristics">
+                  <li>Навыки: Фитнес, Йога</li>
+                  <li>Специализация: Групповые программы</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="jury__slide">
+            <div class="jury__card" tabindex="0">
+              <img class="jury__img" src="./img/card2.jpg" alt="Тренер 2" />
+              <div class="jury__overlay">
+                <p class="jury__name">Тренер 2<br />Опыт: 7 лет</p>
+                <ul class="jury__characteristics">
+                  <li>Навыки: Плавание, Велоспорт</li>
+                  <li>Специализация: Персональные тренировки</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="jury__slide">
+            <div class="jury__card" tabindex="0">
+              <img class="jury__img" src="./img/card3.jpg" alt="Тренер 3" />
+              <div class="jury__overlay">
+                <p class="jury__name">Тренер 3<br />Опыт: 3 года</p>
+                <ul class="jury__characteristics">
+                  <li>Навыки: Бокс, Силовые тренировки</li>
+                  <li>Специализация: Ребята до 16 лет</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="jury__slide">
+            <div class="jury__card" tabindex="0">
+              <img class="jury__img" src="./img/card4.jpg" alt="Тренер 4" />
+              <div class="jury__overlay">
+                <p class="jury__name">Тренер 4<br />Опыт: 4 года</p>
+                <ul class="jury__characteristics">
+                  <li>Навыки: Пилатес, Растяжка</li>
+                  <li>Специализация: Женщины и мамы</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <!-- Вы можете добавлять больше слайдов по аналогии -->
+        </div>
+        <button
+          class="jury__prev jury__button"
+          onclick="changeSlide(-1)"
+        ></button>
+        <button
+          class="jury__next jury__button"
+          onclick="changeSlide(1)"
+        ></button>
+      </section>
+
+      <section class="advantages container">
+        <h3 class="advantages__title">Наши преимущества</h3>
+        <ul class="advantages__list">
+          <li class="advantages__item">
+            <span class="advantages__value">900</span>
+            <span class="advantages__unit">кв/м</span>
+            <h6 class="advantages__name">Площадь</h6>
+            <p class="advantages__description">
+              Занимайтесь без очередей и толкучки
+            </p>
+          </li>
+          <li class="advantages__item">
+            <span class="advantages__value">70</span>
+            <span class="advantages__unit">машин</span>
+            <h6 class="advantages__name">Собственная парковка</h6>
+            <p class="advantages__description">
+              Вы всегда найдёте место для своей машины на нашей парковке
+            </p>
+          </li>
+          <li class="advantages__item advantages__stiled">
+            <span class="advantages__value">100</span>
+            <h4 class="advantages__name">Тренажёров</h4>
+            <p class="advantages__description">
+              Современные тренажёры на все группы мышц
+            </p>
+          </li>
+          <li class="advantages__item">
+            <span class="advantages__value">350</span>
+            <span class="advantages__unit">мест</span>
+            <h6 class="advantages__name">Комфорт</h6>
+            <p class="advantages__description">
+              Просторные раздевалки, душевые, фен, Wi-Fi, кулеры
+            </p>
+          </li>
+          <li class="advantages__item">
+            <span class="advantages__value">5+</span>
+            <span class="advantages__unit">лет</span>
+            <h6 class="advantages__name">Тренерский опыт</h6>
+            <p class="advantages__description">
+              Добивайтесь своих целей быстрее с профессиональным тренером
+            </p>
+          </li>
+        </ul>
+      </section>
+
+      <!-- пример использования спрайта -->
+      <img src="/__spritemap#sprite-logo-view" alt="Это спрайт" />
+      <svg>
+        <use href="/__spritemap#sprite-user"></use>
+      </svg>
+      <!-- примеры требуемых атрибутов data-test="*" -->
+      <div data-test="hero">hero</div>
+      <div data-test="about">about</div>
+      <div data-test="price">price</div>
+      <div data-test="games">games</div>
+      <div data-test="juri">juri</div>
+      <div data-test="features">features</div>
+      <div data-test="offers">offers</div>
+      <div data-test="faq">faq</div>
+      <div data-test="reviews">reviews</div>
+      <div data-test="form">form</div>
+      <div data-test="footer">footer</div>
+      <script type="module" src="js/main.js"></script>
+    </div>
+    <script src="script.js"></script>
+  </body>
 </html>

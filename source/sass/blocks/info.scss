@@ -1,0 +1,49 @@
+.info {
+  display: flex;
+  flex-direction: column;
+  width: 56px;
+}
+
+.info__item {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 5px;
+}
+
+.info__label {
+  display: flex;
+  font-family: $secondary-font;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 20px;
+  text-align: left;
+  width: 56px;
+  border-bottom: 1px solid #ffffff;
+}
+
+.info__value {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  text-align: right;
+}
+
+.info__primary {
+  font-family: $secondary-font;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 24px;
+  display: flex;
+  text-align: left;
+  margin-right: 3px;
+}
+
+.info__secondary {
+  //styleName: xsmall;
+  font-family: $secondary-font;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 12px;
+  display: flex;
+  text-align: left;
+}

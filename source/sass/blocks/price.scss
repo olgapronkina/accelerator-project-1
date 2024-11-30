@@ -1,0 +1,227 @@
+.price {
+  display: flex;
+  flex-direction: column;
+  background-color: #f8f9fc;
+  align-items: center;
+
+  .price__title {
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 32px;
+    color: #102654;
+    margin: 0;
+
+    @media (min-width: $tablet-width) {
+      line-height: 42px;
+      font-size: 42px;
+    }
+
+    @media (min-width: $desktop-width) {
+      font-size: 54px;
+      line-height: 54px;
+    }
+  }
+
+  .price__tabs {
+    width: 290px;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 2px solid #78787833;
+
+    @media (min-width: $tablet-width) {
+      width: 310px;
+    }
+
+    @media (min-width: $desktop-width) {
+      width: 350px;
+    }
+  }
+
+  .price__tab {
+    padding: 10px 20px;
+    color: #102654;
+    opacity: 0.5;
+    border-style: none;
+    background-color: transparent;
+    cursor: pointer;
+
+    &:hover {
+      opacity: 0.75; /* Изменена непрозрачность при наведении */
+      color: #102654;
+      border-color: #787878;
+    }
+
+    &:focus {
+      outline: none; /* Убираем стандартный контур фокуса */
+      color: #102654;
+      border-color: #102654;
+    }
+
+    &:active {
+      border-bottom: 2px solid #ed0233;
+      opacity: 1;
+    }
+
+    &:disabled {
+      opacity: 0.3;
+      color: #102654;
+      border-color: #102654;
+      cursor: default;
+    }
+  }
+
+  .price__content {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .price__list {
+    width: 290px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+    @media (min-width: $tablet-width) {
+      width: 380px;
+    }
+
+    @media (min-width: $desktop-width) {
+      flex-direction: row;
+      width: 1160px;
+    }
+  }
+
+  .price__item {
+    background-color: #ffffff;
+    width: 290px;
+    min-height: 384px;
+    margin-right: 18px;
+    display: flex;
+    justify-content: center;
+
+    @media (min-width: $tablet-width) {
+      width: 380px;
+      min-height: 460px;
+      margin: 65px 0px 0px 0px;
+      padding: 65px 0;
+      margin-right: 22px;
+    }
+
+    @media (min-width: $desktop-width) {
+      width: 360px;
+      min-height: 447px;
+      margin-right: 17px;
+    }
+
+    .price__item--content {
+      display: flex;
+      flex-direction: column;
+      width: 206px;
+
+      @media (min-width: $tablet-width) {
+        width: 250px;
+      }
+
+      @media (min-width: $desktop-width) {
+        width: 230px;
+      }
+    }
+
+    .price__option {
+      font-family: $secondary-font, sans-serif;
+      font-weight: 700;
+      font-size: 22px;
+      line-height: 22px;
+      margin-bottom: 18px;
+
+      @media (min-width: $tablet-width) {
+        line-height: 24px;
+        font-size: 24px;
+        margin-bottom: 22px;
+      }
+
+      @media (min-width: $desktop-width) {
+        font-size: 26px;
+        line-height: 26px;
+        margin-bottom: 17px;
+      }
+    }
+
+    .price__subtitle {
+      font-family: $secondary-font;
+      font-size: 14px;
+      font-weight: 300;
+      line-height: 22px;
+      margin-bottom: 18px;
+
+      @media (min-width: $tablet-width) {
+        font-size: 16px;
+        line-height: 24px;
+        margin-bottom: 22px;
+      }
+
+      @media (min-width: $desktop-width) {
+        margin-bottom: 17px;
+      }
+    }
+
+    .price__all {
+      position: relative;
+      display: inline-flex; /* Изменено на inline-flex для корректного наложения */
+      align-items: center;
+      justify-content: center;
+      line-height: 1; /* Убрано, т.к. это не нужно для наложения */
+    }
+
+    .price__cost {
+      font-family: $secondary-font;
+      font-size: 48px;
+      font-weight: 700;
+      color: #103aae;
+      position: relative; /* Добавлено для позиционирования */
+      z-index: 1; /* Добавлено для корректного z-index */
+    }
+
+    .price__shadow {
+      font-size: 80px;
+      font-weight: 700;
+      color: #e8e8e8;
+      position: absolute; /* Добавлено для абсолютного позиционирования */
+      top: -30px;
+      left: 55px;
+
+      @media (min-width: $tablet-width) {
+        font-size: 100px;
+        line-height: 150px;
+      }
+    }
+
+    .price__currency {
+      width: 24px;
+      height: 33px;
+      margin-left: 5px;
+      z-index: 1;
+
+      @media (min-width: $tablet-width) {
+        width: 30px;
+        height: 42px;
+      }
+    }
+
+    .price__button {
+      min-height: 66px;
+      background-color: transparent;
+      border: 2px solid #000000;
+      color: #000000;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: auto;
+      text-transform: uppercase;
+    }
+  }
+}

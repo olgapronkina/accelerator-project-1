@@ -1,0 +1,156 @@
+.about {
+  background-color: #f9f9f9;
+  color: #102654;
+  display: flex;
+  justify-content: center;
+}
+
+.about__container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin: 0;
+  align-items: center;
+
+  @media (min-width: $tablet-width) {
+    max-width: 678px;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: 1160px;
+  }
+}
+.about__text {
+  width: 290px;
+
+  @media (min-width: $tablet-width) {
+    width: 502px;
+    text-align: center;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 396px;
+    text-align: right;
+  }
+}
+
+.about__title {
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 32px;
+
+  @media (min-width: $tablet-width) {
+    line-height: 42px;
+    font-size: 42px;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 54px;
+    line-height: 54px;
+  }
+}
+
+.about__slogan {
+  font-family: $secondary-font, sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 20px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 22px;
+    line-height: 22px;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 22px;
+    line-height: 22px;
+  }
+}
+
+.about__paragraphs {
+  @media (min-width: $desktop-width) {
+    font-size: 22px;
+    line-height: 22px;
+    width: 355px;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.about__description {
+  font-family: $secondary-font;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 22px;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 20px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+    line-height: 24px;
+    width: 502px;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 22px;
+    line-height: 22px;
+    width: 355px;
+    text-align: start;
+  }
+}
+
+.about__description--hidden {
+  display: none;
+  font-family: $secondary-font;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 22px;
+  margin: 0;
+  padding: 0;
+
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+    line-height: 24px;
+    width: 502px;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: flex;
+    font-size: 22px;
+    line-height: 22px;
+    width: 355px;
+    text-align: start;
+  }
+}
+
+.about__image {
+  width: 320px; /* Адаптивная ширина изображения */
+  height: 280px;
+  margin: 0 auto; /* Центрируем изображение */
+
+  @media (min-width: $tablet-width) {
+    width: 678px;
+    height: 345px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 660px;
+    height: 400px;
+  }
+}
+
+.about__button {
+  display: inline-block;
+  background-color: #007bff;
+  color: #ffffff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+.about__button:hover {
+  background-color: #0056b3;
+}

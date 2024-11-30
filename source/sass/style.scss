@@ -1,4 +1,16 @@
 // Vendor
 // ---------------------------------
 
-@import "vendor/normalize";
+@import 'vendor/normalize';
+@import 'common/fonts.scss';
+@import 'common/variables.scss';
+@import 'common/global.scss';
+
+// @import 'common/';
+@import 'blocks/hero.scss';
+@import 'blocks/about.scss';
+@import 'blocks/price.scss';
+@import 'blocks/games.scss';
+@import 'blocks/info.scss';
+@import 'blocks/swiper.scss';
+@import 'blocks/advantages.scss';
