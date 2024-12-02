@@ -4,6 +4,14 @@
   background-color: #f8f9fc;
   align-items: center;
 
+  @media (min-width: $tablet-width) {
+    padding: 60px 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 120px 0;
+  }
+
   .price__title {
     font-weight: 600;
     font-size: 32px;

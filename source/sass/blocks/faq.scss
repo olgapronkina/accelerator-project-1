@@ -78,7 +78,7 @@
   border: 1px solid #102654;
 }
 
-.faq__tab:active {
+.faq__tab.active {
   background: linear-gradient(97.05deg, #ed0233 17.6%, #003eb7 95.31%);
   color: #ffffff;
 }
@@ -87,10 +87,6 @@
   color: #c8c9cc;
   border: 1px solid #10265433;
   cursor: not-allowed;
-}
-
-.faq__tab.active {
-  background-color: #e0e0e0;
 }
 
 .accordion {
@@ -188,8 +184,8 @@
 .accordion__extra {
   padding: 10px;
   display: none;
-  overflow: hidden; /* Скрываем переполнение */
-  transition: height 0.3s ease; /* Плавный переход для высоты */
+  overflow: hidden;
+  transition: height 0.3s ease;
 }
 
 .accordion__question--description {

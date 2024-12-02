@@ -1,0 +1,104 @@
+.juri {
+  width: 100%;
+  overflow: hidden;
+  padding: 120px 0;
+}
+
+.swiper {
+  width: 100%;
+  height: 200px;
+}
+
+.swiper-wrapper {
+  display: flex;
+  flex-direction: row;
+  box-sizing: border-box;
+}
+
+.swiper-slide {
+  font-family: $secondary-font;
+  width: 260px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.juri__card {
+  width: 260px;
+  position: relative;
+  overflow: hidden;
+}
+
+.juri__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.juri__overlay {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  background-color: #102654e3;
+  color: #ffffff;
+  display: none;
+}
+
+.juri__card:focus .juri__overlay,
+.juri__card:hover .juri__overlay {
+  display: block;
+}
+
+.juri__list {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  list-style: circle;
+  padding-left: 20px;
+  margin-top: 5px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+}
+
+/* Стили для кнопок навигации */
+.swiper-button-prev,
+.swiper-button-next svg {
+  width: 16px;
+  height: 32px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  z-index: 1;
+}
+
+.swiper__buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.swiper-button-prev {
+}
+
+.swiper-button-next {
+  transform: rotate(180deg);
+}
+
+/* Стили для мобильной версии (скрытие кнопок) */
+@media (max-width: 767px) {
+  .swiper-button-prev,
+  .swiper-button-next {
+    display: none;
+  }
+}

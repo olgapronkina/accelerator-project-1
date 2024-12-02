@@ -1,6 +1,13 @@
 .games {
   display: flex;
   justify-content: center;
+  @media (min-width: $tablet-width) {
+    padding: 60px 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 120px 0;
+  }
 }
 
 .games__container {

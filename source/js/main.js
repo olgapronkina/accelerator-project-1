@@ -1,23 +1,38 @@
-// https://swiperjs.com/get-started#installation
-// import Swiper from "swiper";
-// import {Navigation, Pagination} from "swiper/modules";
-// import 'swiper/css';
+// swiperjs.com/get-started#installation
+import Swiper from 'swiper';
+import { Navigation } from 'swiper/modules';
+import 'swiper/css';
 
-// let currentIndex = 0;
+const swiper = new Swiper('.swiper-container', {
+  modules: [Navigation],
+  loop: true, // Зацикливание слайдов
+  speed: 500,
 
-// function changeSlide(direction) {
-//   const slides = document.querySelectorAll('.slide');
-//   currentIndex += direction;
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
 
-//   if (currentIndex < 0) {
-//     currentIndex = slides.length - 1; // Вернуться к последнему слайду
-//   } else if (currentIndex >= slides.length) {
-//     currentIndex = 0; // Вернуться к первому слайду
-//   }
-
-//   const slidesContainer = document.querySelector('.slides');
-//   const offset = -currentIndex * 100; // Сдвиг слайдов
-//   slidesContainer.style.transform = `translateX(${offset}%)`;
-// }
-
-// changeSlide();
+  breakpoints: {
+    320: {
+      width: 260,
+      slidesPerView: 1,
+      initialSlide: 0,
+      spaceBetween: 20,
+    },
+    768: {
+      width: 560,
+      slidesPerView: 2,
+      initialSlide: 0,
+      spaceBetween: 40,
+    },
+    1366: {
+      width: 1160,
+      slidesPerView: 4,
+      initialSlide: 0,
+      spaceBetween: 40,
+      simulateTouch: false,
+    },
+  },
+});
+swiper.slideReset();
