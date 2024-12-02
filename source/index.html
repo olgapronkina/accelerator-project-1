@@ -253,48 +253,477 @@
       </section>
 
       <section class="advantages container">
-        <h3 class="advantages__title">Наши преимущества</h3>
-        <ul class="advantages__list">
-          <li class="advantages__item">
-            <span class="advantages__value">900</span>
-            <span class="advantages__unit">кв/м</span>
-            <h6 class="advantages__name">Площадь</h6>
-            <p class="advantages__description">
-              Занимайтесь без очередей и толкучки
-            </p>
-          </li>
-          <li class="advantages__item">
-            <span class="advantages__value">70</span>
-            <span class="advantages__unit">машин</span>
-            <h6 class="advantages__name">Собственная парковка</h6>
-            <p class="advantages__description">
-              Вы всегда найдёте место для своей машины на нашей парковке
-            </p>
-          </li>
-          <li class="advantages__item advantages__stiled">
-            <span class="advantages__value">100</span>
-            <h4 class="advantages__name">Тренажёров</h4>
-            <p class="advantages__description">
-              Современные тренажёры на все группы мышц
-            </p>
-          </li>
-          <li class="advantages__item">
-            <span class="advantages__value">350</span>
-            <span class="advantages__unit">мест</span>
-            <h6 class="advantages__name">Комфорт</h6>
-            <p class="advantages__description">
-              Просторные раздевалки, душевые, фен, Wi-Fi, кулеры
-            </p>
-          </li>
-          <li class="advantages__item">
-            <span class="advantages__value">5+</span>
-            <span class="advantages__unit">лет</span>
-            <h6 class="advantages__name">Тренерский опыт</h6>
-            <p class="advantages__description">
-              Добивайтесь своих целей быстрее с профессиональным тренером
-            </p>
-          </li>
-        </ul>
+        <div class="advantages__container">
+          <h3 class="advantages__title">Наши преимущества</h3>
+          <ul class="advantages__list">
+            <li class="advantages__item">
+              <div class="advantages__primary">
+                <span class="advantages__value">900</span>
+                <span class="advantages__unit">кв/м</span>
+              </div>
+              <div class="advantages__secondary">
+                <h6 class="advantages__name">Площадь</h6>
+                <p class="advantages__description">
+                  Занимайтесь без очередей и толкучки
+                </p>
+              </div>
+            </li>
+            <li class="advantages__item">
+              <div class="advantages__primary">
+                <span class="advantages__value">70</span>
+                <span class="advantages__unit">машин</span>
+              </div>
+              <div class="advantages__secondary">
+                <h6 class="advantages__name">Собственная парковка</h6>
+                <p class="advantages__description">
+                  Вы всегда найдёте место для своей машины на нашей парковке
+                </p>
+              </div>
+            </li>
+            <li class="advantages__item advantages__stiled">
+              <span class="advantages__value">100</span>
+              <h4 class="advantages__name">Тренажёров</h4>
+              <p class="advantages__description">
+                Современные тренажёры на все группы мышц
+              </p>
+            </li>
+            <li class="advantages__item">
+              <div class="advantages__primary">
+                <span class="advantages__value">350</span>
+                <span class="advantages__unit">мест</span>
+              </div>
+              <div class="advantages__secondary">
+                <h6 class="advantages__name">Комфорт</h6>
+                <p class="advantages__description">
+                  Просторные раздевалки, душевые, фен, Wi-Fi, кулеры
+                </p>
+              </div>
+            </li>
+            <li class="advantages__item">
+              <div class="advantages__primary">
+                <span class="advantages__value">5+</span>
+                <span class="advantages__unit">лет</span>
+              </div>
+              <div class="advantages__secondary">
+                <h6 class="advantages__name">Тренерский опыт</h6>
+                <p class="advantages__description">
+                  Добивайтесь своих целей быстрее с профессиональным тренером
+                </p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="faq container">
+        <h3 class="faq__title">Вопросы и ответы</h3>
+        <div class="faq__container">
+          <ul class="faq__tabs">
+            <li class="faq__tab" id="tab-center" onclick="showTab('center')">
+              Центр
+            </li>
+            <li
+              class="faq__tab"
+              id="tab-abonnement"
+              onclick="showTab('abonnement')"
+            >
+              Абонемент
+            </li>
+            <li
+              class="faq__tab"
+              id="tab-services"
+              onclick="showTab('services')"
+            >
+              Услуги
+            </li>
+            <li class="faq__tab" id="tab-rules" onclick="showTab('rules')">
+              Правила
+            </li>
+          </ul>
+
+          <div class="accordion" id="content-center">
+            <div class="accordion__item">
+              <div class="accordion__header">
+                <h5 class="accordion__question">
+                  Как стать членом фитнес-центра?
+                </h5>
+                <button
+                  class="accordion__button"
+                  onclick="toggleAccordion(this.parentElement.parentElement)"
+                >
+                  <svg class="accordion__button--add">
+                    <use href="/__spritemap#sprite-plus"></use>
+                  </svg>
+                </button>
+              </div>
+              <div
+                class="accordion__extra"
+                id="extra1-center"
+                style="display: none"
+              >
+                <p class="accordion__question--description">
+                  При первом посещении и покупке абонемента, необходимо
+                  заполнить анкету и подписать договор. При покупке абонемента
+                  онлайн, анкета также заполняется онлайн и договор придет вам
+                  на почту.
+                </p>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <div class="accordion__header">
+                <h5 class="accordion__question">
+                  Где можно посмотреть расписание?
+                </h5>
+                <button
+                  class="accordion__button"
+                  onclick="toggleAccordion(this.parentElement.parentElement)"
+                >
+                  <svg class="accordion__button--add">
+                    <use href="/__spritemap#sprite-plus"></use>
+                  </svg>
+                </button>
+              </div>
+              <div
+                class="accordion__extra"
+                id="extra2-center"
+                style="display: none"
+              >
+                <p class="accordion__question--description">...</p>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <div class="accordion__header">
+                <h5 class="accordion__question">
+                  Есть кулеры в центре? Предоставляются полотенца?
+                </h5>
+                <button
+                  class="accordion__button"
+                  onclick="toggleAccordion(this.parentElement.parentElement)"
+                >
+                  <svg class="accordion__button--add">
+                    <use href="/__spritemap#sprite-plus"></use>
+                  </svg>
+                </button>
+              </div>
+              <div
+                class="accordion__extra"
+                id="extra3-center"
+                style="display: none"
+              >
+                <p class="accordion__question--description">...</p>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <div class="accordion__header">
+                <h5 class="accordion__question">
+                  Сколько тренеров работает в клубе и какова их квалификация?
+                </h5>
+                <button
+                  class="accordion__button"
+                  onclick="toggleAccordion(this.parentElement.parentElement)"
+                >
+                  <svg class="accordion__button--add">
+                    <use href="/__spritemap#sprite-plus"></use>
+                  </svg>
+                </button>
+              </div>
+              <div
+                class="accordion__extra"
+                id="extra4-center"
+                style="display: none"
+              >
+                <p class="accordion__question--description">...</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion" id="content-abonnement" style="display: none">
+            <div class="accordion-item">
+              <div class="accordion__header">
+                <h5 class="accordion__question">
+                  Занятия с тренером входят в абонемент?
+                </h5>
+                <button
+                  class="accordion__button"
+                  onclick="toggleAccordion(this.parentElement.parentElement)"
+                >
+                  <svg class="accordion__button--add">
+                    <use href="/__spritemap#sprite-plus"></use>
+                  </svg>
+                </button>
+              </div>
+              <div
+                class="accordion__extra"
+                id="extra1-abonnement"
+                style="display: none"
+              >
+                <p class="accordion__question--description">...</p>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <div class="accordion__header">
+                <h5 class="accordion__question">
+                  Можно ли заморозить абонемент?
+                </h5>
+                <button
+                  class="accordion__button"
+                  onclick="toggleAccordion(this.parentElement.parentElement)"
+                >
+                  <svg class="accordion__button--add">
+                    <use href="/__spritemap#sprite-plus"></use>
+                  </svg>
+                </button>
+              </div>
+              <div
+                class="accordion__extra"
+                id="extra2-abonnement"
+                style="display: none"
+              >
+                <p class="accordion__question--description">...</p>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <div class="accordion__header">
+                <h5 class="accordion__question">
+                  Есть ли лимит по посещениям тренажерного зала и групповых
+                  занятий?
+                </h5>
+                <button
+                  class="accordion__button"
+                  onclick="toggleAccordion(this.parentElement.parentElement)"
+                >
+                  <svg class="accordion__button--add">
+                    <use href="/__spritemap#sprite-plus"></use>
+                  </svg>
+                </button>
+              </div>
+              <div
+                class="accordion__extra"
+                id="extra3-abonnement"
+                style="display: none"
+              >
+                <p class="accordion__question--description">...</p>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <div class="accordion__header">
+                <h5 class="accordion__question">
+                  Что такое семейный доступ и доступ для друзей?
+                </h5>
+                <button
+                  class="accordion__button"
+                  onclick="toggleAccordion(this.parentElement.parentElement)"
+                >
+                  <svg class="accordion__button--add">
+                    <use href="/__spritemap#sprite-plus"></use>
+                  </svg>
+                </button>
+              </div>
+              <div
+                class="accordion__extra"
+                id="extra4-abonnement"
+                style="display: none"
+              >
+                <p class="accordion__question--description">...</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion" id="content-services" style="display: none">
+            <div class="accordion-item">
+              <div class="accordion__header">
+                <h5 class="accordion__question">
+                  Предлагает ли клуб услуги по консультированию по вопросам
+                  питания?
+                </h5>
+                <button
+                  class="accordion__button"
+                  onclick="toggleAccordion(this.parentElement.parentElement)"
+                >
+                  <svg class="accordion__button--add">
+                    <use href="/__spritemap#sprite-plus"></use>
+                  </svg>
+                </button>
+              </div>
+              <div
+                class="accordion__extra"
+                id="extra1-services"
+                style="display: none"
+              >
+                <p class="accordion__question--description">
+                  Да. Вы можете обратиться как к своему тренеру, так и к нашему
+                  нутрициологу. Специалист уточнит ваши данные, цели и предложит
+                  программу питания.
+                </p>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <div class="accordion__header">
+                <h5 class="accordion__question">
+                  Проводятся ли в клубе какие-либо мероприятия или соревнования?
+                </h5>
+                <button
+                  class="accordion__button"
+                  onclick="toggleAccordion(this.parentElement.parentElement)"
+                >
+                  <svg class="accordion__button--add">
+                    <use href="/__spritemap#sprite-plus"></use>
+                  </svg>
+                </button>
+              </div>
+              <div
+                class="accordion__extra"
+                id="extra2-services"
+                style="display: none"
+              >
+                <p class="accordion__question--description">...</p>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <div class="accordion__header">
+                <h5 class="accordion__question">
+                  Можно ли приобрести в центре спортивное питание?
+                </h5>
+                <button
+                  class="accordion__button"
+                  onclick="toggleAccordion(this.parentElement.parentElement)"
+                >
+                  <svg class="accordion__button--add">
+                    <use href="/__spritemap#sprite-plus"></use>
+                  </svg>
+                </button>
+              </div>
+              <div
+                class="accordion__extra"
+                id="extra3-services"
+                style="display: none"
+              >
+                <p class="accordion__question--description">...</p>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <div class="accordion__header">
+                <h5 class="accordion__question">
+                  Есть ли в центре детская комната?
+                </h5>
+                <button
+                  class="accordion__button"
+                  onclick="toggleAccordion(this.parentElement.parentElement)"
+                >
+                  <svg class="accordion__button--add">
+                    <use href="/__spritemap#sprite-plus"></use>
+                  </svg>
+                </button>
+              </div>
+              <div
+                class="accordion__extra"
+                id="extra4-services"
+                style="display: none"
+              >
+                <p class="accordion__question--description">...</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion" id="content-rules" style="display: none">
+            <div class="accordion-item">
+              <div class="accordion__header">
+                <h5 class="accordion__question">
+                  Есть в фитнес-центре дресс-код?
+                </h5>
+                <button
+                  class="accordion__button"
+                  onclick="toggleAccordion(this.parentElement.parentElement)"
+                >
+                  <svg class="accordion__button--add">
+                    <use href="/__spritemap#sprite-plus"></use>
+                  </svg>
+                </button>
+              </div>
+              <div
+                class="accordion__extra"
+                id="extra1-rules"
+                style="display: none"
+              >
+                <p class="accordion__question--description">
+                  Для тренировок необходимо иметь предназначенную для этого
+                  закрытую спортивную обувь и одежду. Верхняя и нижняя части
+                  тела должны быть закрыты (используйте футболки, майки,
+                  спортивные брюки, шорты, кроссовки). В целях безопасности,
+                  запрещается тренироваться босиком, в пляжных или домашних
+                  тапочках и т. п., исключения составляют специальные классы
+                  (например, йога, пилатес).
+                </p>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <div class="accordion__header">
+                <h5 class="accordion__question">
+                  Можно ли приводить с собой детей на тренировки?
+                </h5>
+                <button
+                  class="accordion__button"
+                  onclick="toggleAccordion(this.parentElement.parentElement)"
+                >
+                  <svg class="accordion__button--add">
+                    <use href="/__spritemap#sprite-plus"></use>
+                  </svg>
+                </button>
+              </div>
+              <div
+                class="accordion__extra"
+                id="extra2-rules"
+                style="display: none"
+              >
+                <p class="accordion__question--description">...</p>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <div class="accordion__header">
+                <h5 class="accordion__question">
+                  Какие дополнительные правила посещения центра?
+                </h5>
+                <button
+                  class="accordion__button"
+                  onclick="toggleAccordion(this.parentElement.parentElement)"
+                >
+                  <svg class="accordion__button--add">
+                    <use href="/__spritemap#sprite-plus"></use>
+                  </svg>
+                </button>
+              </div>
+              <div
+                class="accordion__extra"
+                id="extra3-rules"
+                style="display: none"
+              >
+                <p class="accordion__question--description">...</p>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <div class="accordion__header">
+                <h5 class="accordion__question">
+                  Нужна ли медицинская справка для посещения залов и бассейна?
+                </h5>
+                <button
+                  class="accordion__button"
+                  onclick="toggleAccordion(this.parentElement.parentElement)"
+                >
+                  <svg class="accordion__button--add">
+                    <use href="/__spritemap#sprite-plus"></use>
+                  </svg>
+                </button>
+              </div>
+              <div
+                class="accordion__extra"
+                id="extra4-rules"
+                style="display: none"
+              >
+                <p class="accordion__question--description">...</p>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
 
       <!-- пример использования спрайта -->
@@ -316,6 +745,6 @@
       <div data-test="footer">footer</div>
       <script type="module" src="js/main.js"></script>
     </div>
-    <script src="script.js"></script>
+    <script src="./js/faq.js"></script>
   </body>
 </html>

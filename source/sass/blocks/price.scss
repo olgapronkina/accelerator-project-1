@@ -130,6 +130,7 @@
 
     .price__option {
       font-family: $secondary-font, sans-serif;
+      color: #102654;
       font-weight: 700;
       font-size: 22px;
       line-height: 22px;
@@ -194,6 +195,8 @@
       @media (min-width: $tablet-width) {
         font-size: 100px;
         line-height: 150px;
+        top: -65px;
+        left: 70px;
       }
     }
 
@@ -202,6 +205,8 @@
       height: 33px;
       margin-left: 5px;
       z-index: 1;
+      position: absolute;
+      right: 25px;
 
       @media (min-width: $tablet-width) {
         width: 30px;
