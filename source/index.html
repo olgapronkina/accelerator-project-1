@@ -9,7 +9,7 @@
 
   <body class="page-body">
     <div class="page-body__container">
-      <header class="hero container">
+      <header class="hero container" data-test="hero">
         <div class="hero__top">
           <svg class="hero__logo">
             <use href="/__spritemap#sprite-logo"></use>
@@ -46,7 +46,7 @@
         </div>
       </header>
 
-      <section class="about container">
+      <section class="about container" data-test="about">
         <div class="about__container">
           <div class="about__text">
             <h3 class="about__title">Тренажёрный зал</h3>
@@ -73,15 +73,33 @@
             height="280"
             alt="О нас."
           />
+
+          <div class="about__video-container">
+            <!-- <iframe
+              width="320"
+              height="280"
+              src="https://www.youtube.com/watch?v=9TZXsZItgdw"
+              frameborder="0"
+              allowfullscreen
+            ></iframe> -->
+            <img
+              class="about__video"
+              src="./img/video.jpg"
+              srcset="./img/video.jpg@2x 2x"
+              width="320"
+              height="280"
+              alt="Видео."
+            />
+            <!-- <button class="about__play" aria-label="Play"></button> -->
+          </div>
         </div>
       </section>
-      <section class="price container">
+      <section class="price container" data-test="price">
         <h3 class="price__title">Абонементы</h3>
         <div class="price__tabs">
           <button
             class="price__tab price__tab--button price__tab--active"
             data-tab="tab1"
-            active
           >
             1 месяц
           </button>
@@ -150,7 +168,7 @@
         </div>
       </section>
 
-      <section class="games container">
+      <section class="games container" data-test="games">
         <div class="games__container">
           <div class="games__text">
             <div class="games__primary">
@@ -190,123 +208,159 @@
         </div>
       </section>
 
-      <section class="jury">
-        <div class="jury__slides">
-          <div class="jury__slide">
-            <div class="jury__card" tabindex="0">
-              <img class="jury__img" src="./img/card1.jpg" alt="Тренер 1" />
-              <div class="jury__overlay">
-                <p class="jury__name">Тренер 1<br />Опыт: 5 лет</p>
-                <ul class="jury__characteristics">
-                  <li>Навыки: Фитнес, Йога</li>
-                  <li>Специализация: Групповые программы</li>
-                </ul>
+      <section class="juri" data-test="juri">
+        <h3 class="juri__title">Жюри</h3>
+        <div class="juri__slides swiper-container">
+          <div class="swiper-wrapper">
+            <div class="juri__slide swiper-slide">
+              <div class="juri__card" tabindex="0">
+                <img class="juri__img" src="./img/card1.jpg" alt="Тренер 1" />
+                <div class="juri__overlay">
+                  <h6 class="juri__name">Анна Павлова</h6>
+                  <ul class="juri__characteristics">
+                    <li>Навыки: Фитнес, Йога</li>
+                    <li>Специализация: Групповые программы</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="juri__slide swiper-slide">
+              <div class="juri__card" tabindex="0">
+                <img class="juri__img" src="./img/card2.jpg" alt="Тренер 2" />
+                <div class="juri__overlay">
+                  <h6 class="juri__name">Алексей Лавров</h6>
+                  <ul class="juri__characteristics">
+                    <li>Навыки: Плавание, Велоспорт</li>
+                    <li>Специализация: Персональные тренировки</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="juri__slide swiper-slide">
+              <div class="juri__card" tabindex="0">
+                <img class="juri__img" src="./img/card3.jpg" alt="Тренер 3" />
+                <div class="juri__overlay">
+                  <h6 class="juri__name">Александр Пашков</h6>
+                  <ul class="juri__characteristics">
+                    <li>Certified Level 3 Trainer</li>
+                    <li>Победитель чемпионата России по CrossFit</li>
+                    <li>Опыт — 6 лет</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="juri__slide swiper-slide">
+              <div class="juri__card" tabindex="0">
+                <img class="juri__img" src="./img/card4.jpg" alt="Тренер 4" />
+                <div class="juri__overlay">
+                  <p class="juri__name">Мария Кетова</p>
+                  <ul class="juri__characteristics">
+                    <li>Certified Level 3 Trainer</li>
+                    <li>Победитель чемпионата России по CrossFit</li>
+                    <li>Опыт — 6 лет</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="juri__slide swiper-slide">
+              <div class="juri__card" tabindex="0">
+                <img class="juri__img" src="./img/card1.jpg" alt="Тренер 1" />
+                <div class="juri__overlay">
+                  <h6 class="juri__name">Тренер 1<br />Опыт: 5 лет</h6>
+                  <ul class="juri__characteristics">
+                    <li>Certified Level 3 Trainer</li>
+                    <li>Победитель чемпионата России по CrossFit</li>
+                    <li>Опыт — 6 лет</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="juri__slide swiper-slide">
+              <div class="juri__card" tabindex="0">
+                <img class="juri__img" src="./img/card2.jpg" alt="Тренер 2" />
+                <div class="juri__overlay">
+                  <h6 class="juri__name">Тренер 2<br />Опыт: 7 лет</h6>
+                  <ul class="juri__characteristics">
+                    <li>Certified Level 3 Trainer</li>
+                    <li>Победитель чемпионата России по CrossFit</li>
+                    <li>Опыт — 6 лет</li>
+                  </ul>
+                </div>
               </div>
             </div>
           </div>
-          <div class="jury__slide">
-            <div class="jury__card" tabindex="0">
-              <img class="jury__img" src="./img/card2.jpg" alt="Тренер 2" />
-              <div class="jury__overlay">
-                <p class="jury__name">Тренер 2<br />Опыт: 7 лет</p>
-                <ul class="jury__characteristics">
-                  <li>Навыки: Плавание, Велоспорт</li>
-                  <li>Специализация: Персональные тренировки</li>
-                </ul>
-              </div>
+          <!-- Добавляем навигацию -->
+          <div class="swiper__buttons">
+            <div class="swiper-button-prev juri__prev">
+              <svg>
+                <use href="/__spritemap#sprite-arrow"></use>
+              </svg>
+            </div>
+            <div class="swiper-button-next juri__next">
+              <svg>
+                <use href="/__spritemap#sprite-arrow"></use>
+              </svg>
             </div>
           </div>
-          <div class="jury__slide">
-            <div class="jury__card" tabindex="0">
-              <img class="jury__img" src="./img/card3.jpg" alt="Тренер 3" />
-              <div class="jury__overlay">
-                <p class="jury__name">Тренер 3<br />Опыт: 3 года</p>
-                <ul class="jury__characteristics">
-                  <li>Навыки: Бокс, Силовые тренировки</li>
-                  <li>Специализация: Ребята до 16 лет</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div class="jury__slide">
-            <div class="jury__card" tabindex="0">
-              <img class="jury__img" src="./img/card4.jpg" alt="Тренер 4" />
-              <div class="jury__overlay">
-                <p class="jury__name">Тренер 4<br />Опыт: 4 года</p>
-                <ul class="jury__characteristics">
-                  <li>Навыки: Пилатес, Растяжка</li>
-                  <li>Специализация: Женщины и мамы</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <!-- Вы можете добавлять больше слайдов по аналогии -->
         </div>
-        <button
-          class="jury__prev jury__button"
-          onclick="changeSlide(-1)"
-        ></button>
-        <button
-          class="jury__next jury__button"
-          onclick="changeSlide(1)"
-        ></button>
       </section>
 
-      <section class="advantages container">
-        <div class="advantages__container">
-          <h3 class="advantages__title">Наши преимущества</h3>
-          <ul class="advantages__list">
-            <li class="advantages__item">
-              <div class="advantages__primary">
-                <span class="advantages__value">900</span>
-                <span class="advantages__unit">кв/м</span>
+      <section class="features container" data-test="features">
+        <div class="features__container">
+          <h3 class="features__title">Наши преимущества</h3>
+          <ul class="features__list">
+            <li class="features__item">
+              <div class="features__primary">
+                <span class="features__value">900</span>
+                <span class="features__unit">кв/м</span>
               </div>
-              <div class="advantages__secondary">
-                <h6 class="advantages__name">Площадь</h6>
-                <p class="advantages__description">
+              <div class="features__secondary">
+                <h6 class="features__name">Площадь</h6>
+                <p class="features__description">
                   Занимайтесь без очередей и толкучки
                 </p>
               </div>
             </li>
-            <li class="advantages__item">
-              <div class="advantages__primary">
-                <span class="advantages__value">70</span>
-                <span class="advantages__unit">машин</span>
+            <li class="features__item">
+              <div class="features__primary">
+                <span class="features__value">70</span>
+                <span class="features__unit">машин</span>
               </div>
-              <div class="advantages__secondary">
-                <h6 class="advantages__name">Собственная парковка</h6>
-                <p class="advantages__description">
+              <div class="features__secondary">
+                <h6 class="features__name">Собственная парковка</h6>
+                <p class="features__description">
                   Вы всегда найдёте место для своей машины на нашей парковке
                 </p>
               </div>
             </li>
-            <li class="advantages__item advantages__stiled">
-              <span class="advantages__value">100</span>
-              <h4 class="advantages__name">Тренажёров</h4>
-              <p class="advantages__description">
+            <li class="features__item features__stiled">
+              <span class="features__value">100</span>
+              <h4 class="features__name">Тренажёров</h4>
+              <p class="features__description">
                 Современные тренажёры на все группы мышц
               </p>
             </li>
-            <li class="advantages__item">
-              <div class="advantages__primary">
-                <span class="advantages__value">350</span>
-                <span class="advantages__unit">мест</span>
+            <li class="features__item">
+              <div class="features__primary">
+                <span class="features__value">350</span>
+                <span class="features__unit">мест</span>
               </div>
-              <div class="advantages__secondary">
-                <h6 class="advantages__name">Комфорт</h6>
-                <p class="advantages__description">
+              <div class="features__secondary">
+                <h6 class="features__name">Комфорт</h6>
+                <p class="features__description">
                   Просторные раздевалки, душевые, фен, Wi-Fi, кулеры
                 </p>
               </div>
             </li>
-            <li class="advantages__item">
-              <div class="advantages__primary">
-                <span class="advantages__value">5+</span>
-                <span class="advantages__unit">лет</span>
+            <li class="features__item">
+              <div class="features__primary">
+                <span class="features__value">5+</span>
+                <span class="features__unit">лет</span>
               </div>
-              <div class="advantages__secondary">
-                <h6 class="advantages__name">Тренерский опыт</h6>
-                <p class="advantages__description">
+              <div class="features__secondary">
+                <h6 class="features__name">Тренерский опыт</h6>
+                <p class="features__description">
                   Добивайтесь своих целей быстрее с профессиональным тренером
                 </p>
               </div>
@@ -315,7 +369,51 @@
         </div>
       </section>
 
-      <section class="faq container">
+      <section class="offers" data-test="offers">
+        <h3 class="offers__title">Акции</h3>
+        <div class="offers__primary">
+          <div class="offers__text">
+            <h4 class="offers__year">год</h4>
+            <span class="offers__price">4999</span>
+            <p class="offers__paragraph">
+              Безлимитный абонемент в тренажёрный зал
+            </p>
+            <button class="offers__button">Подробнее</button>
+          </div>
+          <img
+            class="offers__img"
+            src="./img/girl-img.jpg"
+            srcset="./img/girl-img.jpg@2x 2x"
+            width="320"
+            height="360"
+            alt="Спортивная девушка."
+          />
+        </div>
+        <div class="offers__secondary">
+          <ul class="offers__list">
+            <li class="offers__item">
+              <h4 class="offers__name">Месяц бесплатно</h4>
+              <p class="offers__paragraph offers__paragraph--stiled">
+                Приведи друга, получи абонемент в подарок
+              </p>
+              <button class="offers__button offers__button--stiled">
+                Подробнее
+              </button>
+            </li>
+            <li class="offers__item">
+              <h4 class="offers__name">Скидка 20%</h4>
+              <p class="offers__paragraph stiled">
+                Корпоративный фитнес с командой
+              </p>
+              <button class="offers__button offers__button--stiled">
+                Подробнее
+              </button>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="faq container" data-test="faq">
         <h3 class="faq__title">Вопросы и ответы</h3>
         <div class="faq__container">
           <ul class="faq__tabs">
@@ -725,26 +823,8 @@
           </div>
         </div>
       </section>
-
-      <!-- пример использования спрайта -->
-      <img src="/__spritemap#sprite-logo-view" alt="Это спрайт" />
-      <svg>
-        <use href="/__spritemap#sprite-user"></use>
-      </svg>
-      <!-- примеры требуемых атрибутов data-test="*" -->
-      <div data-test="hero">hero</div>
-      <div data-test="about">about</div>
-      <div data-test="price">price</div>
-      <div data-test="games">games</div>
-      <div data-test="juri">juri</div>
-      <div data-test="features">features</div>
-      <div data-test="offers">offers</div>
-      <div data-test="faq">faq</div>
-      <div data-test="reviews">reviews</div>
-      <div data-test="form">form</div>
-      <div data-test="footer">footer</div>
-      <script type="module" src="js/main.js"></script>
     </div>
+    <script type="module" src="js/main.js"></script>
     <script src="./js/faq.js"></script>
   </body>
 </html>
