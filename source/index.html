@@ -11,7 +11,7 @@
     <div class="page-body__container">
       <header class="hero container" data-test="hero">
         <div class="hero__top">
-          <svg class="hero__logo">
+          <svg class="hero__logo" width="130" height="26">
             <use href="/__spritemap#sprite-logo"></use>
           </svg>
 
@@ -34,9 +34,7 @@
               </div>
             </div>
 
-            <button class="hero__button" id="buy-abonnement">
-              Купить абонемент
-            </button>
+            <a class="hero__button" href="#price">Купить абонемент</a>
           </div>
 
           <picture>
@@ -205,19 +203,28 @@
           <button
             class="price__tab price__tab--button price__tab--active"
             data-tab="tab1"
+            type="button"
           >
             1 месяц
           </button>
-          <button class="price__tab price__tab--button" data-tab="tab2">
+          <button
+            class="price__tab price__tab--button"
+            data-tab="tab2"
+            type="button"
+          >
             6 месяцев
           </button>
-          <button class="price__tab price__tab--button" data-tab="tab3">
+          <button
+            class="price__tab price__tab--button"
+            data-tab="tab3"
+            type="button"
+          >
             12 месяцев
           </button>
         </div>
 
         <div class="price__content" id="tab1">
-          <ul class="price__list">
+          <ul class="price__list active" id="tab1">
             <li class="price__item">
               <div class="price__item--content">
                 <h4 class="price__option">С тренером</h4>
@@ -225,7 +232,7 @@
                 <div class="price__all">
                   <span class="price__cost">5000</span>
                   <span class="price__shadow">5000</span>
-                  <svg class="price__currency">
+                  <svg class="price__currency" width="24" height="33">
                     <use href="/__spritemap#sprite-currency"></use>
                   </svg>
                 </div>
@@ -242,12 +249,15 @@
                 <div class="price__all">
                   <span class="price__cost">1700</span>
                   <span class="price__shadow">1700</span>
-                  <svg class="price__currency">
+                  <svg class="price__currency" width="24" height="33">
                     <use href="/__spritemap#sprite-currency"></use>
                   </svg>
                 </div>
 
-                <button class="button button--primary price__button">
+                <button
+                  class="button button--primary price__button"
+                  type="button"
+                >
                   Купить абонемент
                 </button>
               </div>
@@ -259,12 +269,15 @@
                 <div class="price__all">
                   <span class="price__cost">2700</span>
                   <span class="price__shadow">2700</span>
-                  <svg class="price__currency">
+                  <svg class="price__currency" width="24" height="33">
                     <use href="/__spritemap#sprite-currency"></use>
                   </svg>
                 </div>
 
-                <button class="button button--primary price__button">
+                <button
+                  class="button button--primary price__button"
+                  type="button"
+                >
                   Купить абонемент
                 </button>
               </div>
@@ -303,7 +316,9 @@
               Ежегодные соревнования<br />
               по CrossFit
             </p>
-            <button class="games__button">заполнить заявку</button>
+            <button class="games__button" type="button">
+              заполнить заявку
+            </button>
           </div>
 
           <picture>
@@ -372,7 +387,7 @@
                     />
                     <img
                       class="juri__img"
-                      src="img/card1.jpg 1x"
+                      src="img/card1.jpg"
                       srcset="img/card1@2x.jpg 2x"
                       width="260"
                       height="300"
@@ -868,7 +883,7 @@
                 </p>
               </div>
 
-              <button class="offers__button">Подробнее</button>
+              <button class="offers__button" type="button">Подробнее</button>
             </div>
             <picture>
               <source
@@ -925,7 +940,10 @@
                   Приведи друга, получи абонемент<br />
                   в подарок
                 </p>
-                <button class="offers__button offers__button--stiled">
+                <button
+                  class="offers__button offers__button--stiled"
+                  type="button"
+                >
                   Подробнее
                 </button>
               </li>
@@ -934,7 +952,10 @@
                 <p class="offers__paragraph stiled">
                   Корпоративный фитнес с командой
                 </p>
-                <button class="offers__button offers__button--stiled">
+                <button
+                  class="offers__button offers__button--stiled"
+                  type="button"
+                >
                   Подробнее
                 </button>
               </li>
