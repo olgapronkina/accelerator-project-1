@@ -44,14 +44,19 @@ body {
     width: 1366px;
   }
 }
+
 .container {
   padding: 0 15px;
+  min-width: 320px;
+  width: 100%;
+  margin: 0 auto;
 
   @media (min-width: $tablet-width) {
     padding: 0 45px;
   }
 
   @media (min-width: $desktop-width) {
+    max-width: 1500px;
     padding: 0 103px;
   }
 }
@@ -170,6 +175,7 @@ img {
 
 p {
   margin: 0;
+  font-family: $secondary-font, sans-serif;
 }
 
 a {

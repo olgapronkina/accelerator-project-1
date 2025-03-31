@@ -5,11 +5,9 @@
   justify-content: center;
 
   @media (min-width: $tablet-width) {
-    padding: 60px 0;
   }
 
   @media (min-width: $desktop-width) {
-    padding: 120px 0;
   }
 }
 .about__container {
@@ -18,19 +16,24 @@
   flex-wrap: wrap;
   margin: 0;
   align-items: center;
-
+  padding-top: 40px;
   @media (min-width: $tablet-width) {
     max-width: 678px;
     flex-direction: row;
     justify-content: center;
+    padding-top: 60px;
   }
 
   @media (min-width: $desktop-width) {
     max-width: 1160px;
+    padding-top: 120px;
+    justify-content: space-between;
   }
 }
 .about__text {
   width: 290px;
+  display: flex;
+  flex-direction: column;
 
   @media (min-width: $tablet-width) {
     width: 502px;
@@ -39,7 +42,7 @@
 
   @media (min-width: $desktop-width) {
     width: 396px;
-    text-align: right;
+    text-align: left;
   }
 }
 
@@ -47,23 +50,26 @@
   font-weight: 600;
   font-size: 32px;
   line-height: 32px;
+  margin-bottom: 12px;
 
   @media (min-width: $tablet-width) {
     line-height: 42px;
     font-size: 42px;
+    margin-bottom: 20px;
   }
 
   @media (min-width: $desktop-width) {
     font-size: 54px;
     line-height: 54px;
+    margin-bottom: 25px;
   }
 }
 
 .about__slogan {
-  font-family: $secondary-font, sans-serif;
   font-weight: 400;
   font-size: 18px;
   line-height: 20px;
+  margin-bottom: 36px;
 
   @media (min-width: $tablet-width) {
     font-size: 22px;
@@ -73,37 +79,39 @@
   @media (min-width: $desktop-width) {
     font-size: 22px;
     line-height: 22px;
+    margin-bottom: 95px;
   }
 }
 
 .about__paragraphs {
   @media (min-width: $desktop-width) {
-    font-size: 22px;
-    line-height: 22px;
     width: 355px;
     display: flex;
     flex-direction: column;
   }
 }
 
-.about__description {
-  font-family: $secondary-font;
+.about p {
   font-size: 14px;
   font-weight: 300;
   line-height: 22px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+.about__description {
   margin: 0;
   padding: 0;
   margin-bottom: 20px;
 
   @media (min-width: $tablet-width) {
-    font-size: 16px;
-    line-height: 24px;
     width: 502px;
   }
 
   @media (min-width: $desktop-width) {
-    font-size: 22px;
-    line-height: 22px;
     width: 355px;
     text-align: start;
   }
@@ -111,29 +119,14 @@
 
 .about__description--hidden {
   display: none;
-  font-family: $secondary-font;
-  font-size: 14px;
-  font-weight: 300;
-  line-height: 22px;
-  margin: 0;
-  padding: 0;
-
-  @media (min-width: $tablet-width) {
-    font-size: 16px;
-    line-height: 24px;
-    width: 502px;
-  }
-
   @media (min-width: $desktop-width) {
     display: flex;
-    font-size: 22px;
-    line-height: 22px;
     width: 355px;
     text-align: start;
   }
 }
 
-.about__image {
+.about__img {
   width: 320px; /* Адаптивная ширина изображения */
   height: 280px;
   margin: 0 auto; /* Центрируем изображение */
@@ -183,59 +176,6 @@
     height: 230px;
   }
 }
-
-// .about__play {
-//   /* Default style */
-//   width: 50px;
-//   height: 50px;
-//   border-radius: 50%; /* Для круглой кнопки */
-//   background: linear-gradient(to right, red, blue); /* Градиентный фон */
-//   border: 2px solid red; /* Красная обводка */
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-//   cursor: pointer;
-// }
-
-// .about__play::before {
-//   content: '\25BA'; /* Unicode символ треугольника */
-//   font-size: 20px;
-//   color: white;
-// }
-
-// .about__play:hover {
-//   /* Hover style */
-//   background: linear-gradient(
-//     to right,
-//     darkred,
-//     darkblue
-//   ); /* Более темный градиент */
-//   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Тень */
-// }
-
-// .about__play:focus {
-//   /* Focus style */
-//   outline: none; /* Убираем стандартную обводку */
-//   box-shadow: 0 0 0 3px yellow; /* Светящаяся рамка */
-// }
-
-// .about__play:active {
-//   /* Active style */
-//   background: linear-gradient(
-//     to right,
-//     crimson,
-//     royalblue
-//   ); /* Еще более насыщенные цвета */
-//   transform: scale(0.95); /* Немного уменьшаем размер */
-// }
-
-// .about__play:disabled {
-//   /* Disabled style */
-//   opacity: 0.5; /* Приглушаем */
-//   cursor: not-allowed;
-//   background: linear-gradient(to right, gray, darkgray); /* Серый градиент */
-//   border-color: gray;
-// }
 
 .about__button {
   display: inline-block;

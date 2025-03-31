@@ -3,6 +3,7 @@
   flex-direction: column;
   background-color: #f8f9fc;
   align-items: center;
+  padding: 40px 0;
 
   @media (min-width: $tablet-width) {
     padding: 60px 0;
@@ -11,230 +12,228 @@
   @media (min-width: $desktop-width) {
     padding: 120px 0;
   }
+}
+.price__title {
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 32px;
+  color: #102654;
+  margin: 0;
+  margin-bottom: 21px;
 
-  .price__title {
-    font-weight: 600;
-    font-size: 32px;
-    line-height: 32px;
-    color: #102654;
-    margin: 0;
-
-    @media (min-width: $tablet-width) {
-      line-height: 42px;
-      font-size: 42px;
-    }
-
-    @media (min-width: $desktop-width) {
-      font-size: 54px;
-      line-height: 54px;
-    }
+  @media (min-width: $tablet-width) {
+    line-height: 42px;
+    font-size: 42px;
+    margin-bottom: 27px;
   }
 
-  .price__tabs {
-    width: 290px;
-    display: flex;
+  @media (min-width: $desktop-width) {
+    font-size: 54px;
+    line-height: 54px;
+    margin-bottom: 20px;
+  }
+}
+
+.price__content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.price__content::before {
+  @media (min-width: $tablet-width) {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: 12px;
+    right: -190px;
+    background-image: image-set(
+      url('../../img/disks.webp') type('image/webp') 1x,
+      url('../../img/disks@2x.webp') type('image/webp') 2x,
+      url('../../img/disks.png') type('image/png') 1x,
+      url('(../../img/disks@2x.png') type('image/png') 2x
+    );
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 275px 328px;
+    width: 275px;
+    height: 328px;
+  }
+
+  @media (min-width: $desktop-width) {
+    background-size: 321px 384px;
+    width: 321px;
+    height: 384px;
+    bottom: 7px;
+    right: -92px;
+  }
+}
+
+.price__list {
+  width: 290px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  position: relative;
+
+  @media (min-width: $tablet-width) {
+    width: 380px;
+  }
+
+  @media (min-width: $desktop-width) {
+    flex-direction: row;
+    width: 1160px;
     justify-content: space-between;
-    border-bottom: 2px solid #78787833;
+  }
+}
+
+.price__item {
+  background-color: #ffffff;
+  width: 290px;
+  min-height: 384px;
+  display: flex;
+  justify-content: center;
+  padding: 42px 50px;
+  margin-bottom: 35px;
+
+  @media (min-width: $tablet-width) {
+    width: 380px;
+    min-height: 460px;
+    padding: 42px;
+    margin-bottom: 40px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 360px;
+    min-height: 447px;
+    margin-bottom: 0;
+  }
+
+  .price__item--content {
+    display: flex;
+    flex-direction: column;
+    width: 206px;
 
     @media (min-width: $tablet-width) {
-      width: 310px;
+      width: 250px;
     }
 
     @media (min-width: $desktop-width) {
-      width: 350px;
+      width: 230px;
     }
   }
 
-  .price__tab {
-    padding: 10px 20px;
+  .price__option {
+    font-family: $secondary-font, sans-serif;
     color: #102654;
-    opacity: 0.5;
-    border-style: none;
-    background-color: transparent;
-    cursor: pointer;
-
-    &:hover {
-      opacity: 0.75; /* Изменена непрозрачность при наведении */
-      color: #102654;
-      border-color: #787878;
-    }
-
-    &:focus {
-      outline: none; /* Убираем стандартный контур фокуса */
-      color: #102654;
-      border-color: #102654;
-    }
-
-    &:active {
-      border-bottom: 2px solid #ed0233;
-      opacity: 1;
-    }
-
-    &:disabled {
-      opacity: 0.3;
-      color: #102654;
-      border-color: #102654;
-      cursor: default;
-    }
-  }
-
-  .price__content {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .price__list {
-    width: 290px;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 22px;
+    margin-bottom: 18px;
 
     @media (min-width: $tablet-width) {
-      width: 380px;
+      line-height: 24px;
+      font-size: 24px;
+      margin-bottom: 22px;
     }
 
     @media (min-width: $desktop-width) {
-      flex-direction: row;
-      width: 1160px;
+      font-size: 26px;
+      line-height: 26px;
+      margin-bottom: 17px;
     }
   }
 
-  .price__item {
-    background-color: #ffffff;
-    width: 290px;
-    min-height: 384px;
-    margin-right: 18px;
-    display: flex;
-    justify-content: center;
+  .price__subtitle {
+    font-family: $secondary-font;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 22px;
+    margin-bottom: 66px;
 
     @media (min-width: $tablet-width) {
-      width: 380px;
-      min-height: 460px;
-      margin: 65px 0px 0px 0px;
-      padding: 65px 0;
-      margin-right: 22px;
-    }
-
-    @media (min-width: $desktop-width) {
-      width: 360px;
-      min-height: 447px;
-      margin-right: 17px;
-    }
-
-    .price__item--content {
-      display: flex;
-      flex-direction: column;
-      width: 206px;
-
-      @media (min-width: $tablet-width) {
-        width: 250px;
-      }
-
-      @media (min-width: $desktop-width) {
-        width: 230px;
-      }
-    }
-
-    .price__option {
-      font-family: $secondary-font, sans-serif;
-      color: #102654;
-      font-weight: 700;
-      font-size: 22px;
-      line-height: 22px;
-      margin-bottom: 18px;
-
-      @media (min-width: $tablet-width) {
-        line-height: 24px;
-        font-size: 24px;
-        margin-bottom: 22px;
-      }
-
-      @media (min-width: $desktop-width) {
-        font-size: 26px;
-        line-height: 26px;
-        margin-bottom: 17px;
-      }
-    }
-
-    .price__subtitle {
-      font-family: $secondary-font;
-      font-size: 14px;
-      font-weight: 300;
-      line-height: 22px;
-      margin-bottom: 18px;
-
-      @media (min-width: $tablet-width) {
-        font-size: 16px;
-        line-height: 24px;
-        margin-bottom: 22px;
-      }
-
-      @media (min-width: $desktop-width) {
-        margin-bottom: 17px;
-      }
-    }
-
-    .price__all {
-      position: relative;
-      display: inline-flex; /* Изменено на inline-flex для корректного наложения */
-      align-items: center;
-      justify-content: center;
-      line-height: 1; /* Убрано, т.к. это не нужно для наложения */
-    }
-
-    .price__cost {
-      font-family: $secondary-font;
-      font-size: 48px;
-      font-weight: 700;
-      color: #103aae;
-      position: relative; /* Добавлено для позиционирования */
-      z-index: 1; /* Добавлено для корректного z-index */
-    }
-
-    .price__shadow {
-      font-size: 80px;
-      font-weight: 700;
-      color: #e8e8e8;
-      position: absolute; /* Добавлено для абсолютного позиционирования */
-      top: -30px;
-      left: 55px;
-
-      @media (min-width: $tablet-width) {
-        font-size: 100px;
-        line-height: 150px;
-        top: -65px;
-        left: 70px;
-      }
-    }
-
-    .price__currency {
-      width: 24px;
-      height: 33px;
-      margin-left: 5px;
-      z-index: 1;
-      position: absolute;
-      right: 25px;
-
-      @media (min-width: $tablet-width) {
-        width: 30px;
-        height: 42px;
-      }
-    }
-
-    .price__button {
-      min-height: 66px;
-      background-color: transparent;
-      border: 2px solid #000000;
-      color: #000000;
-      padding: 10px 20px;
       font-size: 16px;
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-top: auto;
-      text-transform: uppercase;
+      line-height: 24px;
+      margin-bottom: 82px;
     }
+
+    @media (min-width: $desktop-width) {
+      margin-bottom: 77px;
+    }
+  }
+
+  .price__all {
+    position: relative;
+    display: inline-flex; /* Изменено на inline-flex для корректного наложения */
+    align-items: center;
+    justify-content: center;
+    line-height: 1; /* Убрано, т.к. это не нужно для наложения */
+    right: 17px;
+  }
+
+  .price__cost {
+    font-family: $secondary-font;
+    font-size: 48px;
+    line-height: 72px;
+    font-weight: 700;
+    color: #103aae;
+    position: relative;
+    z-index: 1;
+    margin-right: 7px;
+
+    @media (min-width: $tablet-width) {
+      font-size: 60px;
+      line-height: 90px;
+    }
+  }
+
+  .price__shadow {
+    font-family: $secondary-font;
+    font-size: 80px;
+    font-weight: 700;
+    color: #e8e8e8;
+    position: absolute;
+    top: -30px;
+    left: 20px;
+
+    @media (min-width: $tablet-width) {
+      font-size: 100px;
+      line-height: 150px;
+      top: -65px;
+      left: 40px;
+    }
+    @media (min-width: $desktop-width) {
+      left: 25px;
+    }
+  }
+
+  .price__currency {
+    width: 24px;
+    height: 33px;
+    margin-left: 5px;
+    z-index: 1;
+    position: absolute;
+    right: 25px;
+
+    @media (min-width: $tablet-width) {
+      width: 30px;
+      height: 42px;
+    }
+  }
+
+  .price__button {
+    min-height: 66px;
+    background-color: transparent;
+    border: 2px solid #102654;
+    color: #102654;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: auto;
+    text-transform: uppercase;
   }
 }

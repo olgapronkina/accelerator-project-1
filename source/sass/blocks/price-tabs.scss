@@ -1,0 +1,86 @@
+.price__tabs {
+  width: 290px;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 2px solid #78787833;
+  margin-bottom: 36px;
+
+  @media (min-width: $tablet-width) {
+    width: 310px;
+    margin-bottom: 45px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 350px;
+    margin-bottom: 40px;
+  }
+}
+
+.price__tab {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 16px;
+  font-family: $secondary-font;
+  padding: 10px 0;
+  color: #102654;
+  opacity: 0.5;
+  border-style: none;
+  background-color: transparent;
+  cursor: pointer;
+  position: relative;
+  display: inline-block;
+
+  @media (min-width: $tablet-width) {
+    font-size: 18px;
+    line-height: 18px;
+    padding-bottom: 5px;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    height: 2px;
+    background-color: transparent;
+    width: 100%;
+  }
+
+  &:hover {
+    opacity: 0.75; /* Изменена непрозрачность при наведении */
+    color: #102654;
+
+    &::after {
+      background-color: #787878;
+    }
+  }
+
+  &:focus {
+    outline: none; /* Убираем стандартный контур фокуса */
+    color: #102654;
+
+    &::after {
+      background-color: #102654;
+    }
+  }
+
+  &:active {
+    opacity: 1;
+
+    &::after {
+      background-color: #ed0233;
+    }
+  }
+
+  &:disabled {
+    opacity: 0.3;
+    color: #102654;
+    border-color: #102654;
+    cursor: default;
+  }
+}

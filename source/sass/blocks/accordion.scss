@@ -1,0 +1,228 @@
+.accordion__list {
+  display: none;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  color: #102654;
+}
+
+.accordion__list li {
+  position: relative;
+  display: grid;
+  align-items: center;
+  border-bottom: 1px solid #74819c;
+
+  @media (min-width: $desktop-width) {
+    border: none;
+    box-shadow: 0 1px 0 0 #74819c;
+  }
+}
+
+.accordion__list li:first-child {
+  border-top: 1px solid #74819c;
+}
+
+.accordion__list.active {
+  position: relative;
+  align-items: center;
+  display: block;
+}
+
+.accordion__list h4 {
+  font-size: 20px;
+  line-height: 1;
+  font-weight: 400;
+  margin: 0;
+  padding-right: 50px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  z-index: 2;
+
+  @media (min-width: $tablet-width) {
+    font-size: 22px;
+    margin-top: 33px;
+    margin-bottom: 31px;
+    padding-right: 100px;
+    transition: margin-bottom 0.5s;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 24px;
+    margin-bottom: 31px;
+    margin-top: 31px;
+  }
+}
+
+// в макете планшетной версии последний элемент отличается от остальных. Сделано, чтоб пройти PP
+.accordion__list li:last-child h4 {
+  @media (min-width: $tablet-width) {
+    margin-top: 24px;
+    margin-bottom: 22px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 31px;
+    margin-bottom: 31px;
+  }
+}
+
+.accordion__button {
+  position: absolute;
+  top: 25px;
+  right: 0;
+  margin-left: auto;
+  width: 30px;
+  height: 30px;
+  border: 1px solid #1c3374;
+  border-radius: 50%;
+  transition: background-color 0.5s;
+
+  @media (min-width: $tablet-width) {
+    width: 40px;
+    height: 40px;
+    top: 23px;
+  }
+}
+
+.accordion__button:hover {
+  background: #1c3374;
+}
+
+.accordion__button:focus {
+  background: #74819c;
+}
+
+.accordion__button:disabled {
+  background: #1c3374;
+  opacity: 0.3;
+}
+
+.accordion__button::before,
+.accordion__button::after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: calc(50% - 1px);
+  right: calc(50% - 7px);
+  height: 1px;
+  width: 14px;
+  background-color: #1c3374;
+  transition: transform 1s;
+
+  @media (min-width: $tablet-width) {
+    right: calc(50% - 10px);
+    width: 20px;
+  }
+}
+
+.accordion__button:hover::before,
+.accordion__button:hover::after {
+  background-color: #ffffff;
+}
+
+.accordion__button:focus::before,
+.accordion__button:focus::after {
+  background-color: #ffffff;
+}
+
+.accordion__button:disabled::before,
+.accordion__button:disabled::after {
+  background: #1c3374;
+  opacity: 0.3;
+}
+
+.accordion__button::before {
+  transform: rotate(90deg);
+  transition: transform 0.2s;
+}
+
+.accordion__button--close {
+  position: absolute;
+  top: 25px;
+  margin-left: auto;
+  right: 0;
+  width: 30px;
+  height: 30px;
+  background-color: #1c3374;
+  border-radius: 50%;
+
+  @media (min-width: $tablet-width) {
+    width: 40px;
+    height: 40px;
+    top: 23px;
+  }
+}
+
+.accordion__button--close::before,
+.accordion__button--close::after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: calc(50% - 1px);
+  right: calc(50% - 7px);
+  height: 1px;
+  width: 14px;
+  background-color: #ffffff;
+  transition: transform 1s;
+
+  @media (min-width: $tablet-width) {
+    top: calc(50% - 2px);
+    right: calc(50% - 10px);
+    width: 20px;
+  }
+}
+
+.accordion__button--close::before {
+  transform: rotate(180deg);
+  transition: transform 0.2s;
+}
+
+.accordion__list p {
+  grid-column: 1 / -1;
+  visibility: hidden;
+  overflow: hidden;
+  margin: 0;
+  height: 0;
+  opacity: 0;
+  font-size: 16px;
+  line-height: 1.25;
+  transition: visibility 0.5s, overflow 0.5s, height 0.5s, opacity 0.5s,
+    margin 0.5s;
+
+  @media (min-width: $tablet-width) {
+    font-size: 18px;
+    line-height: 1.33;
+    margin-top: 0;
+  }
+}
+
+.accordion__list .active p {
+  grid-column: 1 / -1;
+  visibility: visible;
+  overflow: none;
+  display: block;
+  width: 238px;
+  height: auto;
+  opacity: 1;
+  margin-bottom: 21px;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 20px;
+  transition: visibility 0.5s, overflow 0.5s, height 0.5s, opacity 0.5s,
+    margin-bottom 0.5s;
+
+  @media (min-width: $tablet-width) {
+    font-size: 18px;
+    line-height: 1.33;
+    margin-top: -13px;
+    margin-bottom: 23px;
+    margin-right: 123px;
+    width: auto;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 1px;
+    margin-right: 200px;
+    margin-bottom: 23px;
+  }
+}

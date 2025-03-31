@@ -2,11 +2,11 @@
   display: flex;
   justify-content: center;
   @media (min-width: $tablet-width) {
-    padding: 60px 0;
+    padding: 60px 45px;
   }
 
   @media (min-width: $desktop-width) {
-    padding: 120px 0;
+    padding: 120px 103px;
   }
 }
 
@@ -20,7 +20,7 @@
 
   @media (min-width: $tablet-width) {
     flex-direction: row;
-    width: 678px;
+    // width: 678px;
     min-height: 348px;
   }
 
@@ -34,16 +34,34 @@
   background-color: #ed0233;
   color: #ffffff;
   padding: 40px;
+
+  @media (min-width: $tablet-width) {
+    width: 300px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 500px;
+  }
 }
 
 .games__primary {
   display: flex;
+  justify-content: space-between;
   flex-direction: row;
   flex-wrap: wrap;
+  margin-bottom: 16px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 30px;
+  }
 }
 
 .games__title {
-  margin-right: 37px;
+  // margin-right: 37px;
 }
 
 .games__secondary {
@@ -52,16 +70,18 @@
   font-weight: 300;
   line-height: 20px;
   width: 171px;
-  margin-bottom: 10px;
+  margin-bottom: 16px;
 
   @media (min-width: $tablet-width) {
     width: 100%;
+    margin-bottom: 10px;
+    font-size: 18px;
+    line-height: 24px;
   }
 
-  // @media (min-width: $desktop-width) {
-  //   width: 130px;
-  //   height: 26px;
-  // }
+  @media (min-width: $desktop-width) {
+    margin-bottom: 30px;
+  }
 }
 
 .games__button {
@@ -79,6 +99,9 @@
 }
 
 .games__img {
+  display: block;
+  object-fit: cover;
+  margin: 0;
   width: 290px;
   height: 290px;
 

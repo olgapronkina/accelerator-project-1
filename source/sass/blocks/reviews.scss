@@ -1,0 +1,212 @@
+.reviews {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  text-align: center;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+}
+
+.reviews__title {
+  color: #102654;
+  margin-bottom: 40px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 54px;
+    line-height: 1;
+    margin-bottom: 35px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 75px;
+  }
+}
+
+.reviews__container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  min-width: 0; // отключаем действие flex на swiper
+
+  @media (min-width: $desktop-width) {
+    width: 768px;
+    margin: 0 auto;
+  }
+}
+
+.reviews__swiper.swiper {
+  box-shadow: 0 0 40px 0 #1c337433;
+  margin: 0 auto;
+  height: auto;
+  width: 240px;
+  color: var(--text-primary-light, #ffffff);
+
+  @media (min-width: $tablet-width) {
+    width: 500px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 560px;
+  }
+}
+
+.reviews__slide.swiper-slide {
+  padding: 30px 25px 25px;
+  background-color: #1c3374;
+  text-align: center;
+  width: auto;
+  height: 328px;
+
+  @media (min-width: $tablet-width) {
+    position: relative;
+    text-align: left;
+    width: auto;
+    height: 242px;
+    padding: 40px 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 60px;
+    height: 258px;
+  }
+}
+
+.reviews__slide.swiper-slide img {
+  display: block;
+  object-fit: contain;
+  width: 68px;
+  height: 68px;
+  border-radius: 50%;
+  margin: 0 auto;
+  margin-bottom: 9px;
+
+  @media (min-width: $tablet-width) {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+  }
+}
+
+.reviews__slide.swiper-slide h4 {
+  font-size: 18px;
+  line-height: 1.33;
+  font-weight: 400;
+  margin: 0;
+  margin-bottom: 14px;
+
+  @media (min-width: $tablet-width) {
+    margin-left: 120px;
+    font-size: 22px;
+    line-height: 1;
+    margin-bottom: 20px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-left: 110px;
+  }
+}
+
+.reviews__slide.swiper-slide p {
+  font-size: 14px;
+  line-height: 1.57;
+  font-weight: 300;
+  margin: 0;
+
+  @media (min-width: $tablet-width) {
+    margin-left: 120px;
+    font-size: 16px;
+    line-height: 1.5;
+    height: 120px;
+    overflow-x: hidden;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-left: 110px;
+  }
+}
+
+.reviews__button.swiper-button {
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  height: auto;
+  width: 100%;
+  max-width: 1500px;
+}
+
+.reviews__button-prev.swiper-button-prev {
+  @media (min-width: $tablet-width) {
+    left: -6px;
+    width: 50px;
+    height: 50px;
+  }
+}
+
+.reviews__button-next.swiper-button-next {
+  @media (min-width: $tablet-width) {
+    right: -6px;
+    width: 50px;
+    height: 50px;
+  }
+}
+
+.reviews__button-prev.swiper-button-prev::after,
+.reviews__button-next.swiper-button-next::after {
+  display: none;
+
+  @media (min-width: $tablet-width) {
+    content: '';
+    display: block;
+    position: relative;
+
+    mask-image: url('/__spritemap#sprite-arrow');
+    mask-position: center;
+    mask-repeat: no-repeat;
+    mask-size: 18px 34px;
+    background-color: #102654;
+    width: 50px;
+    height: 300px;
+    bottom: 125px;
+  }
+}
+
+.reviews__button-next.swiper-button-next::after {
+  @media (min-width: $tablet-width) {
+    transform: rotate(180deg);
+  }
+}
+
+.reviews__button-prev.swiper-button-prev:hover,
+.reviews__button-next.swiper-button-next:hover {
+  border: 1px solid #102654;
+  border-radius: 50%;
+}
+
+.reviews__button-prev.swiper-button-prev:focus,
+.reviews__button-next.swiper-button-next:focus {
+  background: #e8e8e8;
+  border: 1px solid #102654;
+  border-radius: 50%;
+}
+
+.reviews__button-prev.swiper-button-prev:active,
+.reviews__button-next.swiper-button-next:active {
+  background: #102654;
+
+  border: 1px solid #102654;
+  border-radius: 50%;
+}
+
+.reviews__button-prev.swiper-button-prev:active::after,
+.reviews__button-next.swiper-button-next:active::after {
+  background-color: #ffffff;
+}

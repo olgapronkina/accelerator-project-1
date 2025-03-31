@@ -1,14 +1,27 @@
 .offers {
   width: 100%;
   display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  @media (min-width: $tablet-width) {
+  }
+
+  @media (min-width: $desktop-width) {
+  }
+}
+.offers__container {
+  display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   @media (min-width: $tablet-width) {
+    padding: 0 45px;
   }
 
   @media (min-width: $desktop-width) {
+    flex-direction: row;
   }
 }
 
@@ -29,9 +42,11 @@
   @media (min-width: $tablet-width) {
     flex-direction: row;
     min-height: 462px;
+    margin-bottom: 35px;
   }
 
   @media (min-width: $desktop-width) {
+    width: 560px;
   }
 }
 
@@ -48,16 +63,33 @@
   padding: 30px;
 
   @media (min-width: $tablet-width) {
+    width: 278px;
+    justify-content: space-between;
+    padding: 40px 25px;
+    align-items: flex-start;
   }
 
   @media (min-width: $desktop-width) {
+    width: 280px;
+    padding: 40px 45px;
+  }
+}
+
+.offers__group {
+  @media (min-width: $tablet-width) {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    min-height: 202px;
+    flex-direction: column;
+    flex-wrap: wrap;
   }
 }
 
 .offers__img {
   width: 320px;
   height: 360px;
-  object-fit: contain;
+  object-fit: cover;
 
   @media (min-width: $tablet-width) {
     width: 400px;
@@ -112,6 +144,9 @@
   @media (min-width: $tablet-width) {
     font-size: 18px;
     line-height: 24px;
+    align-self: flex-start;
+    display: contents;
+    margin-bottom: 30px;
   }
 }
 
@@ -135,17 +170,32 @@
   }
 
   @media (min-width: $desktop-width) {
+    border-bottom: 1px solid #74819c;
   }
+}
+
+.offers__button:hover {
+  opacity: 0.8;
+}
+
+.offers__button:focus {
+  padding: 10px;
+  border: none;
+  box-shadow: 0 0 0 1px #1c3374;
 }
 
 .offers__secondary {
   padding: 0 15px;
   @media (min-width: $tablet-width) {
-    padding: 0 45px;
+    padding: 0;
   }
 
   @media (min-width: $desktop-width) {
-    padding: 0 103px;
+    width: 560px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    box-sizing: border-box;
   }
 }
 
@@ -157,6 +207,8 @@
   @media (min-width: $tablet-width) {
     flex-direction: row;
     flex-wrap: wrap;
+    width: 678px;
+    justify-content: space-between;
   }
 
   @media (min-width: $desktop-width) {
@@ -170,19 +222,35 @@
   flex-direction: column;
   align-items: center;
   padding: 20px;
-  border: 7px solid;
-  border-image-source: linear-gradient(148.82deg, #d10a42 0.85%, #00359f 100%);
+  border: 7px solid transparent;
+  border-image: linear-gradient(148.82deg, #d10a42 0.85%, #00359f 100%) 1;
+
+  &:not(:last-child) {
+    margin-bottom: 30px;
+    @media (min-width: $tablet-width) {
+      margin-bottom: 0;
+    }
+  }
 
   @media (min-width: $tablet-width) {
+    align-items: start;
+    margin-bottom: 0;
+    width: 324px;
+    min-height: 188px;
   }
 
   @media (min-width: $desktop-width) {
+    width: 100%;
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
   }
 }
 
 .offers__name {
   margin-bottom: 20px;
   @media (min-width: $tablet-width) {
+    margin-bottom: 10px;
   }
 
   @media (min-width: $desktop-width) {

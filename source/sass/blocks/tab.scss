@@ -1,0 +1,33 @@
+.tab__button.active {
+  border: none;
+  background: var(
+    --button-gradient,
+    linear-gradient(151deg, #ed0233 0%, #003eb7 100%)
+  );
+  color: var(--text-primary-light, #ffffff);
+
+  @media (min-width: $desktop-width) {
+    padding-top: 20px;
+    padding-bottom: 16px;
+  }
+}
+
+.tab__button {
+  font-family: $secondary-font;
+  font-size: 16px;
+  line-height: 1;
+  padding: 14px;
+  background-color: #f8f9fc;
+  color: #102654;
+  border: 1px solid #10265433;
+
+  @media (min-width: $tablet-width) {
+    font-size: 18px;
+    padding: 17px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 20px;
+    padding-bottom: 14px;
+  }
+}

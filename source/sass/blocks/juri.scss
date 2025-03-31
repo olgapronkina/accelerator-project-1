@@ -1,101 +1,235 @@
 .juri {
-  width: 100%;
-  overflow: hidden;
-  padding: 120px 0;
+  padding-top: 40px;
+  padding-bottom: 40px;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 30px;
+    padding-bottom: 60px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
 }
 
-.swiper {
-  width: 100%;
-  height: 200px;
+.juri__slider {
+  position: relative;
+  max-width: 1500px;
+  margin: 0 auto;
 }
 
-.swiper-wrapper {
+.juri__title {
+  color: #102654;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 20px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 54px;
+    line-height: 1;
+    margin-bottom: 46px;
+  }
+}
+
+.juri__container {
+  position: relative;
   display: flex;
-  flex-direction: row;
-  box-sizing: border-box;
+  align-items: center;
+  min-width: 0; // отключаем действие flex на swiper
 }
 
-.swiper-slide {
-  font-family: $secondary-font;
+.juri__swiper.swiper {
+  margin: 0 auto;
+  height: auto;
   width: 260px;
-  height: 100%;
+
+  @media (min-width: $tablet-width) {
+    padding: 0;
+    width: 560px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 1160px;
+  }
+}
+
+.juri__wrapper.swiper-wrapper {
+  padding: 0;
+}
+
+.juri__slide.swiper-slide {
   display: flex;
   justify-content: center;
-  align-items: center;
-}
-
-.juri__card {
-  width: 260px;
   position: relative;
+  width: 260px;
+  height: 300px;
+  text-align: center;
   overflow: hidden;
+
+  @media (min-width: $tablet-width) {
+    flex-basis: 260px;
+  }
 }
 
-.juri__img {
-  width: 100%;
-  height: 100%;
+.juri__slide.swiper-slide img {
+  display: block;
+  margin: 0 auto;
+  width: auto;
+  height: 300px;
   object-fit: cover;
 }
 
-.juri__overlay {
-  position: absolute;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  bottom: 0;
-  left: 0;
-  width: 100%;
+.juri__back {
+  content: '';
+  display: block;
+  width: 260px;
   height: 100%;
-  padding: 10px;
-  background-color: #102654e3;
-  color: #ffffff;
-  display: none;
+  position: absolute;
+  top: 110%;
+  background-color: rgba(16, 38, 84, 0.89);
+  box-shadow: 0 0 35px 0 rgba(42, 59, 99, 0.17);
+  transition: 2s;
+  padding: 47px 40px;
+  color: var(--text-primary-light, #ffffff);
+
+  @media (min-width: $tablet-width) {
+    width: 100%;
+  }
 }
 
-.juri__card:focus .juri__overlay,
-.juri__card:hover .juri__overlay {
-  display: block;
+.juri__slide:hover .juri__back,
+.juri__slide:focus .juri__back {
+  top: 0;
+}
+
+.juri__slide:hover .juri__name,
+.juri__slide:focus .juri__name {
+  top: 0;
+}
+
+.juri__name {
+  position: relative;
+  top: -122px;
+  margin: 0;
+  margin-bottom: 8px;
+  font-size: 22px;
+  line-height: 1;
+  font-weight: 400;
+  transition: 2s;
+}
+
+.juri__description {
+  font-size: 16px;
+  line-height: 1.5;
+  margin: 0;
+  margin-bottom: 35px;
+  color: var(--text-card, #b6bdcc);
 }
 
 .juri__list {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  box-sizing: border-box;
-  list-style: circle;
-  padding-left: 20px;
-  margin-top: 5px;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 22px;
+  display: grid;
+  gap: 12px;
+  margin-left: 26px;
+  list-style-type: disc;
+
+  padding: 0;
   text-align: left;
-  text-underline-position: from-font;
-  text-decoration-skip-ink: none;
+  font-size: 14px;
+  line-height: 1.57;
+  max-width: 180px;
 }
 
-/* Стили для кнопок навигации */
-.swiper-button-prev,
-.swiper-button-next svg {
-  width: 16px;
-  height: 32px;
-  background-size: contain;
-  background-repeat: no-repeat;
-  z-index: 1;
-}
+.juri__button.swiper-button {
+  display: none;
+  margin: 0 auto;
+  height: auto;
+  width: 100%;
+  max-width: 1500px;
 
-.swiper__buttons {
-  display: flex;
-  justify-content: space-between;
-}
+  @media (min-width: $tablet-width) {
+    width: 693px;
+    left: 37px;
 
-.swiper-button-next {
-  transform: rotate(180deg);
-}
-
-/* Стили для мобильной версии (скрытие кнопок) */
-@media (max-width: 767px) {
-  .swiper-button-prev,
-  .swiper-button-next {
-    display: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    bottom: 125px;
   }
+
+  @media (min-width: $desktop-width) {
+    width: 1293px;
+  }
+}
+
+.juri__button-prev.swiper-button-prev {
+  @media (min-width: $tablet-width) {
+    left: 35px;
+    top: calc(50% + 48px);
+    width: 50px;
+    height: 50px;
+  }
+}
+
+.juri__button-next.swiper-button-next {
+  @media (min-width: $tablet-width) {
+    right: 35px;
+    top: calc(50% + 48px);
+    width: 50px;
+    height: 50px;
+  }
+}
+
+.juri__button-prev.swiper-button-prev::after,
+.juri__button-next.swiper-button-next::after {
+  display: none;
+
+  @media (min-width: $tablet-width) {
+    content: '';
+    display: block;
+    position: relative;
+    left: calc(50% - 27px);
+    top: -125px;
+    mask-image: url('/__spritemap#sprite-arrow');
+    mask-position: center;
+    mask-repeat: no-repeat;
+    mask-size: 18px 32px;
+    background-color: var(--button-border-dark, #102654);
+    width: 50px;
+    height: 300px;
+  }
+}
+
+.juri__button-next.swiper-button-next::after {
+  @media (min-width: $tablet-width) {
+    left: calc(50% - 23px);
+    transform: rotate(180deg);
+  }
+}
+
+.juri__button-prev.swiper-button-prev:hover,
+.juri__button-next.swiper-button-next:hover {
+  border: 1px solid var(--button-border-dark, #102654);
+  border-radius: 50%;
+}
+
+.juri__button-prev.swiper-button-prev:focus,
+.juri__button-next.swiper-button-next:focus {
+  background: var(--back-button, #e8e8e8);
+  border: 1px solid var(--button-border-dark, #102654);
+  border-radius: 50%;
+}
+
+.juri__button-prev.swiper-button-prev:active,
+.juri__button-next.swiper-button-next:active {
+  background: var(--button-border-dark, #102654);
+
+  border: 1px solid var(--button-border-dark, #102654);
+  border-radius: 50%;
+}
+
+.juri__button-prev.swiper-button-prev:active::after,
+.juri__button-next.swiper-button-next:active::after {
+  background-color: var(--back-primary, #ffffff);
 }
